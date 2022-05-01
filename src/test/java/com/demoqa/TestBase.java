@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 public class TestBase {
 
 
-//    String base_url = System.getProperty("base_url","https://demoqa.tt");
+//    String base_url = System.getProperty("base_url","https://demoqa.com");
 //    String browser_size = System.getProperty("browser_size","1920x1080");
 
     @BeforeAll
@@ -21,7 +21,7 @@ public class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         Configuration.baseUrl = System.getProperty("base_url","https://demoqa.tt");
-        Configuration.browserSize = System.getProperty("browser_size","1920x1080");
+        Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
