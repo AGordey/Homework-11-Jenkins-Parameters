@@ -11,12 +11,17 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
+
+
+    static String base_url = System.getProperty("base_url","https://demoqa.com");
+    static String browser_size = System.getProperty("browser_size","1920x1080");
+
     @BeforeAll
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = base_url ;
+        Configuration.browserSize = browser_size;
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -33,7 +38,4 @@ public class TestBase {
         Attach.addVideo();
         closeWebDriver();
     }
-
-
-
 }
