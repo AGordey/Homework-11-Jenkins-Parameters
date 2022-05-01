@@ -12,6 +12,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
+
 public class TestBase {
 
     static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
