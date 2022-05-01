@@ -13,8 +13,8 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 public class TestBase {
 
 
-    static String base_url = System.getProperty("base_url","https://demoqa.com");
-    static String browser_size = System.getProperty("browser_size","1920x1080");
+    String base_url = System.getProperty("base_url","https://demoqa.tt");
+    String browser_size = System.getProperty("browser_size","1920x1080");
 
     @BeforeAll
     static void setUp() {
